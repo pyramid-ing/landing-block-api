@@ -5,8 +5,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Blog API Service - 티스토리, 네이버 블로그 API',
-  description: 'n8n, Make.com과 100% 호환되는 티스토리, 네이버 블로그, 블로그스팟 API 서비스',
+  title: 'Bridgflow - Make, N8N 커스텀 API 서비스',
+  description: 'Make, N8N 등에서 공식 지원하지 않는 API들을 커스텀으로 제작해드리는 서비스',
 }
 
 export default function RootLayout({

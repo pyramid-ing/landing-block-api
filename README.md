@@ -6,6 +6,8 @@
 
 - **지원 플랫폼**: 티스토리, 네이버 블로그, 블로그스팟
 - **자동화 도구 연동**: n8n, Make.com 100% 호환
+- **AI 에이전트 연동**: Google Gemini와 연동하여 자동 콘텐츠 생성
+- **실제 검증**: n8n 워크플로우로 검증된 API
 - **가격**: 월 1만원
 - **CTA**: 구글폼 신청 링크 연동
 
@@ -76,11 +78,16 @@ NEXT_PUBLIC_YOUTUBE_VIDEO_ID=your-youtube-video-id
 landing-block-api/
 ├── app/
 │   ├── components/
-│   │   └── VideoEmbed.tsx
+│   │   ├── VideoEmbed.tsx
+│   │   └── ImageGallery.tsx
 │   ├── globals.css
 │   ├── layout.tsx
 │   └── page.tsx
 ├── public/
+│   └── images/
+│       ├── 1.n8n 노드 설정1.png
+│       ├── 2.node에서 결과2.png
+│       └── 3.포스팅결과.png
 ├── package.json
 ├── tailwind.config.js
 ├── next.config.js
