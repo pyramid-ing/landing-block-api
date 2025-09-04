@@ -5,10 +5,10 @@ import VideoEmbed from './components/VideoEmbed'
 import ImageGallery from './components/ImageGallery'
 
 export default function Home() {
-  const handleSignUp = () => {
-    // 구글폼 링크로 이동
-    const formUrl = 'https://forms.gle/v44PU1AKintkSerW8'
-    window.open(formUrl, '_blank')
+  const handleKakaoInquiry = () => {
+    // 카카오톡 오픈채팅방으로 이동
+    const kakaoUrl = 'https://open.kakao.com/o/sAPShNNh'
+    window.open(kakaoUrl, '_blank')
   }
 
   return (
@@ -19,13 +19,17 @@ export default function Home() {
           <div className="flex justify-between items-center py-6">
             <div className="flex items-center">
               <Zap className="h-8 w-8 text-blue-600" />
-              <span className="ml-2 text-xl font-bold text-gray-900">Bridgflow</span>
+              <span className="ml-2 text-xl font-bold text-gray-900">브릿지플로우</span>
             </div>
             <button
-              onClick={handleSignUp}
-              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+              onClick={handleKakaoInquiry}
+              className="text-black px-6 py-2 rounded-lg transition-colors flex items-center gap-2"
+              style={{ backgroundColor: '#FAE102' }}
+              onMouseEnter={(e) => e.target.style.backgroundColor = '#F0D000'}
+              onMouseLeave={(e) => e.target.style.backgroundColor = '#FAE102'}
             >
-              사용신청
+              <img src="/logos/kakao_logo.webp" alt="카카오톡" className="w-5 h-5" />
+              카톡문의
             </button>
           </div>
         </div>
@@ -38,20 +42,71 @@ export default function Home() {
             {/* Left Side - Text Content */}
             <div className="text-center lg:text-left">
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                Make, N8N에서
-                <span className="text-blue-600"> 커스텀 API</span>를
+                진짜 100% 완전 자동 포스팅 되는
+                <span className="text-blue-600"> AI 블로그 자동화</span>
+                <br />브릿지플로우
               </h1>
               <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto lg:mx-0">
-                공식 지원하지 않는 API들을 Bridgflow가 만들어드립니다. 
-                Make, N8N 워크플로우에서 바로 사용할 수 있는 커스텀 API 서비스로 
-                자동화의 한계를 뛰어넘으세요.
+                복잡한 설정 없이 티스토리와 네이버 블로그에 
+                글을 자동으로 올려주는 프로그램입니다.
               </p>
+              
+              {/* 플랫폼 로고들 */}
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6 mb-8">
+                <div className="flex items-center gap-2">
+                  <img src="/logos/n8n_logo.png" alt="N8N" className="h-8 w-auto" />
+                  <span className="text-gray-600 font-medium">N8N</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <img src="/logos/make_logo.png" alt="Make" className="h-8 w-auto" />
+                  <span className="text-gray-600 font-medium">Make</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <img src="/logos/tistory_logo.png" alt="티스토리" className="h-8 w-auto" />
+                  <span className="text-gray-600 font-medium">티스토리</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <img src="/logos/naver_blog_logo.png" alt="네이버 블로그" className="h-8 w-auto" />
+                  <span className="text-gray-600 font-medium">네이버 블로그</span>
+                </div>
+              </div>
+
+              {/* 가격 정보 */}
+              <div className="bg-gray-50 rounded-lg p-6 mb-8 max-w-md mx-auto lg:mx-0">
+                <div className="text-center">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">월 9,900원</h3>
+                  <p className="text-gray-600 mb-4">한 달에 9,900원만 내면 자동 포스팅 프로그램 사용 가능</p>
+                  
+                  {/* 카카오뱅크 입금 정보 */}
+                  <div className="bg-white rounded-lg p-4 border border-gray-200">
+                    <div className="flex items-center justify-center gap-2 mb-3">
+                      <img src="/logos/kakao_bank_logo.png" alt="카카오뱅크" className="h-6 w-auto" />
+                      <span className="font-semibold text-gray-900">카카오뱅크 입금</span>
+                    </div>
+                    <div className="text-lg font-mono font-bold text-gray-900 mb-2">
+                      3333-13-7868656
+                    </div>
+                    <div className="text-sm text-gray-600 mb-3">
+                      예금주: 김x기
+                    </div>
+                    <p className="text-xs text-gray-500">
+                      입금 후 카톡으로 연락주시면<br />
+                      자동 포스팅 프로그램을 보내드립니다
+                    </p>
+                  </div>
+                </div>
+              </div>
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <button
-                  onClick={handleSignUp}
-                  className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors"
+                  onClick={handleKakaoInquiry}
+                  className="text-black px-8 py-4 rounded-lg text-lg font-semibold transition-colors flex items-center gap-3"
+                  style={{ backgroundColor: '#FAE102' }}
+                  onMouseEnter={(e) => e.target.style.backgroundColor = '#F0D000'}
+                  onMouseLeave={(e) => e.target.style.backgroundColor = '#FAE102'}
                 >
-                  사용신청
+                  <img src="/logos/kakao_logo.webp" alt="카카오톡" className="w-6 h-6" />
+                  카톡문의
                 </button>
               </div>
             </div>
@@ -277,160 +332,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              합리적인 구독 가격
-            </h2>
-            <p className="text-xl text-gray-600">
-              기간별 할인 혜택으로 더욱 경제적인 선택
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-200">
-              <div className="text-center">
-                <h3 className="text-lg font-bold mb-2 text-black">1개월</h3>
-                <div className="text-2xl font-bold mb-4 text-blue-600">
-                  ₩10,000
-                  <span className="text-sm font-normal text-gray-600">/월</span>
-                </div>
-                
-                <ul className="space-y-2 mb-6 text-left text-sm">
-                  <li className="flex items-center">
-                    <Check className="h-4 w-4 mr-2 text-green-500" />
-                    <span className="text-black">커스텀 API 개발</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="h-4 w-4 mr-2 text-green-500" />
-                    <span className="text-black">Make/N8N 연동</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="h-4 w-4 mr-2 text-green-500" />
-                    <span className="text-black">기본 기술 지원</span>
-                  </li>
-                </ul>
-                
-                <button
-                  onClick={handleSignUp}
-                  className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-sm"
-                >
-                  신청하기
-                </button>
-              </div>
-            </div>
-            
-            <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-200">
-              <div className="text-center">
-                <h3 className="text-lg font-bold mb-2 text-black">3개월</h3>
-                <div className="text-2xl font-bold mb-4 text-blue-600">
-                  ₩25,000
-                  <span className="text-sm font-normal text-gray-600">/3개월</span>
-                </div>
-                <div className="text-xs text-green-600 mb-2">월 8,333원 (17% 할인)</div>
-                
-                <ul className="space-y-2 mb-6 text-left text-sm">
-                  <li className="flex items-center">
-                    <Check className="h-4 w-4 mr-2 text-green-500" />
-                    <span className="text-black">커스텀 API 개발</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="h-4 w-4 mr-2 text-green-500" />
-                    <span className="text-black">Make/N8N 연동</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="h-4 w-4 mr-2 text-green-500" />
-                    <span className="text-black">우선 기술 지원</span>
-                  </li>
-                </ul>
-                
-                <button
-                  onClick={handleSignUp}
-                  className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-sm"
-                >
-                  신청하기
-                </button>
-              </div>
-            </div>
-            
-            <div className="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-6 rounded-2xl shadow-xl transform scale-105">
-              <div className="text-center">
-                <h3 className="text-lg font-bold mb-2">6개월</h3>
-                <div className="text-2xl font-bold mb-4">
-                  ₩45,000
-                  <span className="text-sm font-normal">/6개월</span>
-                </div>
-                <div className="text-xs text-blue-200 mb-2">월 7,500원 (25% 할인)</div>
-                
-                <ul className="space-y-2 mb-6 text-left text-sm">
-                  <li className="flex items-center">
-                    <Check className="h-4 w-4 mr-2" />
-                    <span>커스텀 API 개발</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="h-4 w-4 mr-2" />
-                    <span>Make/N8N 연동</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="h-4 w-4 mr-2" />
-                    <span>실시간 모니터링</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="h-4 w-4 mr-2" />
-                    <span>우선 기술 지원</span>
-                  </li>
-                </ul>
-                
-                <button
-                  onClick={handleSignUp}
-                  className="w-full bg-white text-blue-600 py-2 px-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-sm"
-                >
-                  신청하기
-                </button>
-              </div>
-            </div>
-            
-            <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-200">
-              <div className="text-center">
-                <h3 className="text-lg font-bold mb-2 text-black">1년</h3>
-                <div className="text-2xl font-bold mb-4 text-blue-600">
-                  ₩80,000
-                  <span className="text-sm font-normal text-gray-600">/1년</span>
-                </div>
-                <div className="text-xs text-green-600 mb-2">월 6,667원 (33% 할인)</div>
-                
-                <ul className="space-y-2 mb-6 text-left text-sm">
-                  <li className="flex items-center">
-                    <Check className="h-4 w-4 mr-2 text-green-500" />
-                    <span className="text-black">커스텀 API 개발</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="h-4 w-4 mr-2 text-green-500" />
-                    <span className="text-black">Make/N8N 연동</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="h-4 w-4 mr-2 text-green-500" />
-                    <span className="text-black">실시간 모니터링</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="h-4 w-4 mr-2 text-green-500" />
-                    <span className="text-black">24/7 우선 지원</span>
-                  </li>
-                </ul>
-                
-                <button
-                  onClick={handleSignUp}
-                  className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-sm"
-                >
-                  신청하기
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
 
 
@@ -442,13 +343,17 @@ export default function Home() {
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             Make, N8N에서 공식 지원하지 않는 API가 필요하시다면 
-            Bridgflow가 해결해드립니다. 맞춤형 API로 완벽한 자동화를 구현하세요.
+            브릿지플로우가 해결해드립니다. 맞춤형 API로 완벽한 자동화를 구현하세요.
           </p>
           <button
-            onClick={handleSignUp}
-            className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors"
+            onClick={handleKakaoInquiry}
+            className="text-black px-8 py-4 rounded-lg text-lg font-semibold transition-colors flex items-center gap-3 mx-auto"
+            style={{ backgroundColor: '#FAE102' }}
+            onMouseEnter={(e) => e.target.style.backgroundColor = '#F0D000'}
+            onMouseLeave={(e) => e.target.style.backgroundColor = '#FAE102'}
           >
-            무료 상담 신청
+            <img src="/logos/kakao_logo.webp" alt="카카오톡" className="w-6 h-6" />
+            카톡문의
           </button>
         </div>
       </section>
@@ -473,7 +378,7 @@ export default function Home() {
             <div>
               <div className="flex items-center mb-4">
                 <Zap className="h-6 w-6 text-blue-400" />
-                <span className="ml-2 text-lg font-bold">Bridgflow</span>
+                <span className="ml-2 text-lg font-bold">브릿지플로우</span>
               </div>
               <p className="text-gray-400">
                 Make, N8N 커스텀 API 서비스로 자동화의 한계를 뛰어넘는 
@@ -509,7 +414,7 @@ export default function Home() {
           </div>
           
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Bridgflow. All rights reserved.</p>
+            <p>&copy; 2024 브릿지플로우. All rights reserved.</p>
           </div>
         </div>
       </footer>

@@ -6,7 +6,7 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Bridgflow - Make, N8N 커스텀 API 서비스',
+  title: '브릿지플로우 - Make, N8N 커스텀 API 서비스',
   description: 'Make, N8N 등에서 공식 지원하지 않는 API들을 커스텀으로 제작해드리는 서비스',
   other: {
     'naver-site-verification': 'e3e7b583792b1b01ea790ba5e919ffe610952d4e',
