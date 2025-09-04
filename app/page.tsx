@@ -25,8 +25,8 @@ export default function Home() {
               onClick={handleKakaoInquiry}
               className="text-black px-6 py-2 rounded-lg transition-colors flex items-center gap-2"
               style={{ backgroundColor: '#FAE102' }}
-              onMouseEnter={(e) => e.target.style.backgroundColor = '#F0D000'}
-              onMouseLeave={(e) => e.target.style.backgroundColor = '#FAE102'}
+              onMouseEnter={(e) => (e.target as HTMLButtonElement).style.backgroundColor = '#F0D000'}
+              onMouseLeave={(e) => (e.target as HTMLButtonElement).style.backgroundColor = '#FAE102'}
             >
               <img src="/logos/kakao_logo.webp" alt="카카오톡" className="w-5 h-5" />
               카톡문의
@@ -102,8 +102,8 @@ export default function Home() {
                   onClick={handleKakaoInquiry}
                   className="text-black px-8 py-4 rounded-lg text-lg font-semibold transition-colors flex items-center gap-3"
                   style={{ backgroundColor: '#FAE102' }}
-                  onMouseEnter={(e) => e.target.style.backgroundColor = '#F0D000'}
-                  onMouseLeave={(e) => e.target.style.backgroundColor = '#FAE102'}
+                  onMouseEnter={(e) => (e.target as HTMLButtonElement).style.backgroundColor = '#F0D000'}
+                  onMouseLeave={(e) => (e.target as HTMLButtonElement).style.backgroundColor = '#FAE102'}
                 >
                   <img src="/logos/kakao_logo.webp" alt="카카오톡" className="w-6 h-6" />
                   카톡문의
@@ -349,8 +349,8 @@ export default function Home() {
             onClick={handleKakaoInquiry}
             className="text-black px-8 py-4 rounded-lg text-lg font-semibold transition-colors flex items-center gap-3 mx-auto"
             style={{ backgroundColor: '#FAE102' }}
-            onMouseEnter={(e) => e.target.style.backgroundColor = '#F0D000'}
-            onMouseLeave={(e) => e.target.style.backgroundColor = '#FAE102'}
+                              onMouseEnter={(e) => (e.target as HTMLButtonElement).style.backgroundColor = '#F0D000'}
+                  onMouseLeave={(e) => (e.target as HTMLButtonElement).style.backgroundColor = '#FAE102'}
           >
             <img src="/logos/kakao_logo.webp" alt="카카오톡" className="w-6 h-6" />
             카톡문의
